@@ -125,7 +125,7 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
-		<?php if ($logged_in): ?>
+		<?php if (false): ?> <!-- "if ($logged_in):" -->
   		<?php if ($main_menu): ?>
      		<div id="main-menu" class="navigation">
         	<?php print theme('links__system_main_menu', array(

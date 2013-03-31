@@ -6,7 +6,11 @@ core = 7.x
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
+stylesheets[all][] = css/cec.css
+stylesheets[all][] = css/cecsf.css
 stylesheets[print][] = css/print.css
+
+scripts[] = js/cec.js
 
 regions[header] = Header
 regions[help] = Help

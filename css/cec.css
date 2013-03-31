@@ -1,0 +1,36 @@
+
+/* ---------- CEC specifics ----------- */
+
+/* --- Table style for the summaries pages: default -- */
+.cecsummaries table {
+	border: none;
+	border-collapse: separate;
+  border-spacing: 10px;  
+}
+
+.cecsummaries td {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #c4c4c4;
+  vertical-align: top;
+}
+
+/* --- Table style for the summaries pages: highlighting on mouse hover: -- */
+/*     default padding is "4px 9px", so we have to reduce it to match the
+       thicker border */ 
+.cecsummaries td:hover {
+	border-width: 3px;
+	padding: 2px 7px;
+	-moz-border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ---------- Table style for the summaries pages: highlighted ------- */
+/* ---------- * needs corresponding jQuery function (cec.js)   ------- */
+/* ---------- * currently not used                             ------- */
+td.cecsummariesh {
+	border-width: 5px;
+  border-style: solid;
+  border-color: red;
+  cursor: default;
+}

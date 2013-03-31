@@ -28,12 +28,34 @@ function cec_preprocess_node(&$variables) {
   		$nodes[] = array("id" => $ex[1], "link" => $l['value']);
   	}
   	// Create the rendered output
+  	$rows = array();
+  	$line = array();
+  	$columncount = 0;
+  	// Render the cells: teaser plus 'read more' link
   	foreach( $nodes as $n ){
+  		$columncount++;
   		$no = node_view(node_load($n['id']),'teaser');
-  		$summaries .= drupal_render($no['body'][0]);
+  		$cell = drupal_render($no['body'][0]); 		
   		$li = array('#type' => 'link',  '#href' => $n['link'], '#title' => t('Read more'));
-  		$summaries .= drupal_render( $li );
+  		$cell .= drupal_render( $li );
+  		$line[] = $cell;
+  		// when the line is full, append it and re-initialize variables
+  		if ( $columncount == 3 ){
+  		  $rows[] = $line;
+  		  $columncount = 0;
+  		  $line = array();
+  		}
   	}
+  	// check for an unfinished row
+  	if ( !$line == array() ){
+  		$rows[] = $line;
+  	}
+  	// Render the whole table
+  	$rend = array(
+    	'#theme' => 'table',
+    	'#rows' => $rows,
+    );
+    $summaries = drupal_render( $rend );
   }
- 	$variables['summaries'] = $summaries;
+  $variables['summaries'] = $summaries;
 }
