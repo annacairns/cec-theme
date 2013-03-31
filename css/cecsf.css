@@ -10,10 +10,10 @@
 }
 .sf-menu a > .sf-sub-indicator {
   top: 1.5em;
-  background-image: url('images/simple-arrows.png');
+  background-image: url('../images/simple-arrows.png');
 }
 .sf-menu.rtl a > .sf-sub-indicator {
-  background-image: url('images/simple-arrows-rtl.png');
+  background-image: url('../images/simple-arrows-rtl.png');
 }
 .sf-menu.sf-vertical a > .sf-sub-indicator {
   top: 1.1em;
@@ -194,11 +194,11 @@
   border-top-color: #e0e0e0;
 }
 .sf-menu li {
-  background: url('images/simple-background.png') repeat-x top left #eeeeee;
+  background: url('../images/simple-background.png') repeat-x top left #eeeeee;
 }
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-  background: url('images/simple-background-active.png') repeat-x top left #fefefe;
+  background: url('../images/simple-background-active.png') repeat-x top left #fefefe;
 }
 .sf-menu.sf-horizontal > li.first {
   -webkit-border-top-left-radius: 8px;
@@ -353,7 +353,7 @@
 .sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper,
 .sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper:hover,
 .sf-menu li ul.sf-megamenu  li.sf-megamenu-wrapper.sfHover {
-  background: url('images/simple-background.png') repeat-x top left #eeeeee;
+  background: url('../images/simple-background.png') repeat-x top left #eeeeee;
 }
 .sf-menu li ul.sf-megamenu li.sf-megamenu-wrapper ol,
 .sf-menu li ul.sf-megamenu li.sf-megamenu-wrapper ol li {
@@ -373,7 +373,7 @@
   color: #222222;
 }
 .sf-menu ul.sf-megamenu li.sf-megamenu-wrapper ol li.sf-megamenu-column ol li {
-  background: url('images/simple-list.png') no-repeat left center;
+  background: url('../images/simple-list.png') no-repeat left center;
   margin: 0 0 0 1em;
   padding: 0 0 0 1em;
 }
